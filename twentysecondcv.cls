@@ -180,7 +180,7 @@
         \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{\givenprofilepic}};
 \end{tikzpicture}}
 
-{\Huge\color{mainblue}\givencvname}
+{\huge\color{mainblue}\givencvname}
 
 \begin{flushright}
 {\Large\color{black!80}\givencvjobtitle}
