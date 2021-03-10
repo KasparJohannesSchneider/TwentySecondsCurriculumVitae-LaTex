@@ -107,6 +107,8 @@
 \newcommand{\cvnumberphone}[1]{\renewcommand{\givennumberphone}{#1}}    % phone
 \newcommand{\cvaddress}[1]{\renewcommand{\givencvaddress}{#1}}          % address
 \newcommand{\cvsite}[1]{\renewcommand{\givencvsite}{#1}}                % site
+\newcommand{\cvgithub}[1]{\renewcommand{\givencvgithub}{#1}}            % github
+\newcommand{\cvlinkedin}[1]{\renewcommand{\givencvlinkedin}{#1}}        % linkedIn
 \newcommand{\aboutme}[1]{\renewcommand{\givenaboutme}{  \justifying#1}} % about me
 \newcommand{\profilepic}[1]{\renewcommand{\givenprofilepic}{#1}}        % picture
 \newcommand{\cvname}[1]{\renewcommand{\givencvname}{#1}}                % name
@@ -120,6 +122,8 @@
 \newcommand{\givenaboutme}{}         % about me
 \newcommand{\givenprofilepic}{}      % picture
 \newcommand{\givencvsite}{}          % site
+\newcommand{\givencvgithub}{}        % github
+\newcommand{\givencvlinkedin}{}      % linkedIn
 \newcommand{\givencvjobtitle}{}      % job title
 
 % icon in blue circle; #1 -> icon
@@ -210,6 +214,10 @@
         \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \givennumberphone\\}
         % CV site
         \ifthenelse{\equal{\givencvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \href{\givencvsite}{\textcolor{cerulean}\givencvsite}\\}
+        % Github
+        \ifthenelse{\equal{\givencvgithub}{}}{}{\textsc{\large\icon{\faGithub}} & \href{https://www.github.com/\givencvgithub}{\textcolor{cerulean}\givencvgithub}\\}
+        % LinkedIn
+        \ifthenelse{\equal{\givencvlinkedin}{}}{}{\textsc{\large\icon{\faLinkedin}} & \href{https://www.linkedin.com/in/\givencvlinkedin}{\textcolor{cerulean}\givencvlinkedin}\\}
         % CV mail
         \ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\givencvmail}{\textcolor{cerulean}\givencvmail}}
       \end{tabular}
