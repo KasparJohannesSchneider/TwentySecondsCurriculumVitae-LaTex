@@ -147,6 +147,13 @@ These are the commands to set up the profile information.
 * Set up your personal home page.
 	
 		\cvsite{home page address}
+* [optional] Set up your GitHub profile (⚠ requires option `icon`). 
+	
+		\cvgithub{GitHub username}
+* [optional] Set up your LinkedIn profile (⚠ requires option `icon`).
+Linked in public profile url name can be set up on LinkedIn under `Me` -> `View Profile` -> `Edit public profile & URL` -> `Edit your custom URL`
+	
+		\cvlinkedin{LinkedIn public profile url name}
 * Set up a brief description of you.
 	
 		\about{brief description}
