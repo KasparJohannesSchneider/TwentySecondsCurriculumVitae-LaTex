@@ -232,17 +232,17 @@
       \end{tabular}
 
       % about me text
-      \profilesection{About me}{3.2cm}
-      \givenaboutme
+      % \profilesection{About me}{3.2cm}
+      % \givenaboutme
 
       % skills with scale
-      \profilesection{Skill}{5cm}
+      \profilesection{Skills}{4cm}
       \givenskill
       \giventextskill
       \noindent
       \scriptsize
       \noindent
-      (*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
+      % (*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
 
     \end{flushleft}
   \end{textblock}
