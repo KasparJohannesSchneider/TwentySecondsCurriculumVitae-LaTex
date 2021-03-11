@@ -143,18 +143,20 @@
 }
 
 % skill bar graphs
+\newcommand{\barHeight}{0.45} % hight of each bar graph
+\newcommand{\barVfact}{1.25}  % Factor that controls vertical spacing
 \newcommand\skills[1]{
   \renewcommand{\givenskill}{
     \noindent
     \begin{tikzpicture}
     \foreach [count=\i] \x/\y in {#1}
     {
-      \draw[fill=maingray,maingray] (0,-\i) rectangle (6,-\i+0.4);
-      \draw[fill=white,mainblue](0,-\i) rectangle (1.2*\y,-\i+0.4);
-      \node [above right ] at (0,-\i+0.4) {\x};
+      \draw[fill=maingray,maingray] (0,{-(\i*\barVfact)}) rectangle (6,{-(\i*\barVfact)+\barHeight});
+      \draw[fill=white,mainblue](0,{-(\i*\barVfact)}) rectangle (1.2*\y,{-(\i*\barVfact)+\barHeight});
+      \node [above right ] at (0,{-(\i*\barVfact)+\barHeight}) {\x};
       \foreach \z in {0,1,2,...,10}
       {
-        \coordinate (A\z) at ($(0,-\i)+(1.2*\z*0.5cm,0)$) {};
+        \coordinate (A\z) at ($(0,{-(\i*\barVfact)})+(1.2*\z*0.5cm,0)$) {};
         \ifodd\z
             \draw[white] ($(A\z)$) -- ($(A\z)+(0,2.5pt)$);
         \else
