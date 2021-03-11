@@ -196,7 +196,7 @@
       \end{tikzpicture}}
 
       % name
-      {\Huge\color{mainblue}\givencvname}
+      {\huge\color{mainblue}\givencvname}
 
       % jobtitle
       \begin{flushright}
