@@ -106,7 +106,9 @@
 \newcommand{\cvmail}[1]{\renewcommand{\givencvmail}{#1}}                % mail
 \newcommand{\cvnumberphone}[1]{\renewcommand{\givennumberphone}{#1}}    % phone
 \newcommand{\cvaddress}[1]{\renewcommand{\givencvaddress}{#1}}          % address
-\newcommand{\cvsite}[1]{\renewcommand{\givencvsite}{#1}}                % site
+\newcommand{\cvdriving}[1]{\renewcommand{\givencvdriving}{#1}}          % driver's licenses
+\newcommand{\cvstack}[2]{\renewcommand{\givencvstack}{#1}               % stack
+\renewcommand{\givencvstacklink}{#2}}                                   % stack link
 \newcommand{\cvgithub}[1]{\renewcommand{\givencvgithub}{#1}}            % github
 \newcommand{\cvlinkedin}[1]{\renewcommand{\givencvlinkedin}{#1}}        % linkedIn
 \newcommand{\aboutme}[1]{\renewcommand{\givenaboutme}{  \justifying#1}} % about me
@@ -119,9 +121,11 @@
 \newcommand{\givencvmail}{}          % mail
 \newcommand{\givennumberphone}{}     % phone
 \newcommand{\givencvaddress}{}       % address
+\newcommand{\givencvdriving}{}       % driver's licenses
 \newcommand{\givenaboutme}{}         % about me
 \newcommand{\givenprofilepic}{}      % picture
-\newcommand{\givencvsite}{}          % site
+\newcommand{\givencvstack}{}         % stack
+\newcommand{\givencvstacklink}{}     % stack link
 \newcommand{\givencvgithub}{}        % github
 \newcommand{\givencvlinkedin}{}      % linkedIn
 \newcommand{\givencvjobtitle}{}      % job title
@@ -207,19 +211,24 @@
       % table with icons 
       \begin{tabular}{c @{\hskip 0.2cm} p{5cm}}
         % CV date
-        \ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\Large\icon{\Info}} & \givencvdate\\}
+        \ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\large\icon{\faCalendar}} & \givencvdate\\}
         % CV address
-        \ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \givencvaddress\\}
+        \ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\Large\icon{\faHome}} & \givencvaddress\\}
+        % drivers License
+        \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\large\icon{\faCar}} & \givencvdriving\\}
+        &\\
         % CV phone
-        \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \givennumberphone\\}
-        % CV site
-        \ifthenelse{\equal{\givencvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \href{\givencvsite}{\textcolor{cerulean}\givencvsite}\\}
+        \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\faPhone}} & \givennumberphone\\}
+        % CV mail
+        \ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{\faEnvelopeO}} & \href{mailto:\givencvmail}{\textcolor{cerulean}\givencvmail}\\}
+        &\\
+        % CV stackoverflow
+        \ifthenelse{\equal{\givencvstack}{}}{}{\textsc{\large\icon{\faStackOverflow}} & \href{\givencvstacklink}{\textcolor{cerulean}\givencvstack}\\}
         % Github
         \ifthenelse{\equal{\givencvgithub}{}}{}{\textsc{\large\icon{\faGithub}} & \href{https://www.github.com/\givencvgithub}{\textcolor{cerulean}\givencvgithub}\\}
         % LinkedIn
         \ifthenelse{\equal{\givencvlinkedin}{}}{}{\textsc{\large\icon{\faLinkedin}} & \href{https://www.linkedin.com/in/\givencvlinkedin}{\textcolor{cerulean}\givencvlinkedin}\\}
-        % CV mail
-        \ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\givencvmail}{\textcolor{cerulean}\givencvmail}}
+        &
       \end{tabular}
 
       % about me text
