@@ -53,20 +53,21 @@
 %%%%%%%%%%
 % colors %
 %%%%%%%%%%
-\definecolor{white}{RGB}{255,255,255} 
-\definecolor{darkgray}{HTML}{333333} 
-\definecolor{gray}{HTML}{4D4D4D}
-\definecolor{sidecolor}{HTML}{E7E7E7}
-\definecolor{lightgray}{HTML}{999999}
-\definecolor{green}{HTML}{C2E15F}
-\definecolor{orange}{HTML}{FDA333}
-\definecolor{purple}{HTML}{D3A4F9}
-\definecolor{red}{HTML}{FB0B00}
-\definecolor{blue}{HTML}{6CE0F1}
-\definecolor{mainblue}{HTML}{0E5484}
-\definecolor{cerulean}{HTML}{007BA7}
-\definecolor{maingray}{HTML}{B9B9B9}
-\definecolor{maindarkgray}{HTML}{B3B3B3}
+\definecolor{black}{RGB}{0,0,0}          % black
+\definecolor{white}{RGB}{255,255,255}    % white
+\definecolor{darkgray}{HTML}{333333}     % darkgray
+\definecolor{gray}{HTML}{4D4D4D}         % gray
+\definecolor{sidecolor}{HTML}{E7E7E7}    % sidecolor
+\definecolor{lightgray}{HTML}{999999}    % lightgray
+\definecolor{green}{HTML}{C2E15F}        % green
+\definecolor{orange}{HTML}{FDA333}       % orange
+\definecolor{purple}{HTML}{D3A4F9}       % purple
+\definecolor{red}{HTML}{FB0B00}          % red
+\definecolor{blue}{HTML}{6CE0F1}         % blue
+\definecolor{mainblue}{HTML}{0E5484}     % mainblue
+\definecolor{cerulean}{HTML}{007BA7}     % cerulean
+\definecolor{maingray}{HTML}{B9B9B9}     % maingray
+\definecolor{maindarkgray}{HTML}{B3B3B3} % maindarkgray
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}

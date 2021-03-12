@@ -230,6 +230,7 @@ The following colors are defined and used by this class:
 
 |Name|Color|Usage|
 |:---:|:---:|---------|
+|black|![#000000](https://via.placeholder.com/60x15/000000/000000?text=+)| black text | 
 |white|![#ffffff](https://via.placeholder.com/60x15/ffffff/000000?text=+)| white text | 
 |gray|![#4D4D4D](https://via.placeholder.com/60x15/4D4D4D/000000?text=+)|   |
 |sidecolor|![#E7E7E7](https://via.placeholder.com/60x15/E7E7E7/000000?text=+)| background of the sidebar |
