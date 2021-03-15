@@ -139,7 +139,7 @@
 % Text in square node with rounded corners; #1 -> text, #2 -> color
 \newcommand*\round[2]{%
 \tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle,
-  rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm,
+  rounded corners, inner sep=2pt, minimum size=5.5mm, text height=4.5mm,
   fill=#2,#2,text=white](char){#1};%
 }
 
@@ -256,10 +256,10 @@
 % Section Color box %
 %%%%%%%%%%%%%%%%%%%%%
 \newcounter{colorCounter}
-\def\@sectioncolor#1#2#3{
+\newcommand{\@sectioncolor}[1]{ 
   {%
   % Switch between blue and gray
-   \round{#1#2#3}{%
+   \round{#1}{%
       \ifodd\value{colorCounter}%
         mainblue%
       \else%
@@ -275,7 +275,7 @@
   {%
     \LARGE 
     \color{headercolor}%
-    \@sectioncolor #1%
+    \@sectioncolor{#1}%
   }
   \par\vspace{\parskip}
 }
@@ -286,7 +286,7 @@
     \LARGE 
     #1 
     \color{headercolor}%
-    \@sectioncolor #2%
+    \@sectioncolor{#2}%
   }
   \par\vspace{\parskip}
 }
