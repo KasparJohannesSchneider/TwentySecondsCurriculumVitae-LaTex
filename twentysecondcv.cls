@@ -46,7 +46,7 @@
   \PassOptionsToClass{\CurrentOption}{article}
 }
 \ProcessOptions\relax
-\ifbool{icon}{\RequirePackage{fontawesome}}{}
+\ifbool{icon}{\RequirePackage[fixed]{fontawesome5}}{}
 
 \usetikzlibrary{calc}
 
@@ -133,7 +133,7 @@
 
 % icon in blue circle; #1 -> icon
 \newcommand*\icon[1]{\tikz[baseline=(char.base)]{
-  \node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}
+  \node[shape=circle,draw,inner sep=-0.5pt, fill=mainblue,mainblue,text=white] (char) {#1};}
 }
 
 % Text in square node with rounded corners; #1 -> text, #2 -> color
@@ -144,8 +144,8 @@
 }
 
 % skill bar graphs
-\newcommand{\barHeight}{0.45} % hight of each bar graph
-\newcommand{\barVfact}{1.25}  % Factor that controls vertical spacing
+\newcommand{\barHeight}{0.35} % hight of each bar graph
+\newcommand{\barVfact}{1.05}  % Factor that controls vertical spacing
 \newcommand\skills[1]{
   \renewcommand{\givenskill}{
     \noindent
@@ -214,23 +214,23 @@
       % table with icons 
       \begin{tabular}{c @{\hskip 0.2cm} p{5cm}}
         % CV date
-        \ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\large\icon{\faCalendar}} & \givencvdate\\}
+        \ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\normalsize\icon{\faIcon{calendar-alt}}} & \givencvdate\\}
         % CV address
-        \ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\Large\icon{\faHome}} & \givencvaddress\\}
+        \ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\normalsize\icon{\faHome}} & \givencvaddress\\}
         % drivers License
-        \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\large\icon{\faCar}} & \givencvdriving\\}
+        \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\normalsize\icon{\faCar}} & \givencvdriving\\}
         &\\
         % CV phone
-        \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\faPhone}} & \givennumberphone\\}
+        \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\normalsize\icon{\faPhone}} & \givennumberphone\\}
         % CV mail
-        \ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{\faEnvelopeO}} & \href{mailto:\givencvmail}{\textcolor{cerulean}\givencvmail}\\}
-        &\\
+        \ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\normalsize\icon{\faEnvelope}} & \href{mailto:\givencvmail}{\textcolor{cerulean}\givencvmail}\\}
+        % &\\
         % CV stackoverflow
-        \ifthenelse{\equal{\givencvstack}{}}{}{\textsc{\large\icon{\faStackOverflow}} & \href{\givencvstacklink}{\textcolor{cerulean}\givencvstack}\\}
+        \ifthenelse{\equal{\givencvstack}{}}{}{\textsc{\normalsize\icon{\faStackOverflow}} & \href{\givencvstacklink}{\textcolor{cerulean}\givencvstack}\\}
         % Github
-        \ifthenelse{\equal{\givencvgithub}{}}{}{\textsc{\large\icon{\faGithub}} & \href{https://www.github.com/\givencvgithub}{\textcolor{cerulean}\givencvgithub}\\}
+        \ifthenelse{\equal{\givencvgithub}{}}{}{\textsc{\normalsize\icon{\faGithub}} & \href{https://www.github.com/\givencvgithub}{\textcolor{cerulean}\givencvgithub}\\}
         % LinkedIn
-        \ifthenelse{\equal{\givencvlinkedin}{}}{}{\textsc{\large\icon{\faLinkedin}} & \href{https://www.linkedin.com/in/\givencvlinkedin}{\textcolor{cerulean}\givencvlinkedin}\\}
+        \ifthenelse{\equal{\givencvlinkedin}{}}{}{\textsc{\normalsize\icon{\faLinkedin}} & \href{https://www.linkedin.com/in/\givencvlinkedin}{\textcolor{cerulean}\givencvlinkedin}\\}
         &
       \end{tabular}
 
@@ -327,7 +327,7 @@
 }
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitemicon}[5]{%
- \hspace{3pt}\faicon{#1}\hspace{2pt}#2&\parbox[t]{11.2cm}{%
+ \hspace{3pt}#1\hspace{2pt}#2&\parbox[t]{11.2cm}{%
     \textbf{#3}%
     \hfill%
     {\footnotesize#4}\\%
@@ -358,7 +358,7 @@
 }
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitemshorticon}[3]{%
-  \hspace{3pt}\faicon{#1}\hspace{3pt}#2&
+  \hspace{3pt}#1\hspace{3pt}#2&
       \parbox[t]{11.5cm}{%
     \textbf{#3}%
   }\\%
