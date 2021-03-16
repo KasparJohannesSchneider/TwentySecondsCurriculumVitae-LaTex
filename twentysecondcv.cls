@@ -261,9 +261,9 @@
   % Switch between blue and gray
    \round{#1}{%
       \ifodd\value{colorCounter}%
-        mainblue%
-      \else%
         maingray%
+      \else%
+        mainblue%
       \fi%
     }%
   }%
