@@ -276,6 +276,7 @@
   \stepcounter{colorCounter}%
 }
 
+% Section without an icon
 \renewcommand{\section}[1]{
   \par%
   {%
@@ -286,6 +287,7 @@
   \par\vspace{\parskip}
 }
 
+% Section with an icon
 \newcommand{\sectionicon}[2]{
   \par%
   {%
@@ -297,6 +299,7 @@
   \par\vspace{\parskip}
 }
 
+% Subsection
 \renewcommand{\subsection}[1]{
   \par\vspace{.5\parskip}%
   {%
@@ -318,13 +321,13 @@
 }
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitem}[4]{%
-  \hspace{5pt}\parbox[t]{2.6cm}{#1\hfill}&%
+\hspace{3pt}\parbox[t]{0.5cm}{\hfill}\hspace{2pt}\parbox[t]{1.9cm}{#1\hfill}&%
   \parbox[t]{10.5cm}{%
     \textbf{#2}%
     \hfill%
     {\footnotesize#3}\\%
-    #4\vspace{\parsep}%
-  }\\%
+      #4\vspace{\parsep}%
+    }\\%
 }
 \setlength{\tabcolsep}{0pt}
 \newenvironment{twentyicon}{%
@@ -334,11 +337,11 @@
 }
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitemicon}[5]{%
- \hspace{3pt}\parbox[t]{0.5cm}{#1\hfill}\hspace{2pt}\parbox[t]{1.9cm}{#2\hfill}&%
- \parbox[t]{10.7cm}{%
-    \textbf{#3}%
-    \hfill%
-    {\footnotesize#4}\\%
+  \hspace{3pt}\parbox[t]{0.5cm}{#1\hfill}\hspace{2pt}\parbox[t]{1.9cm}{#2\hfill}&%
+  \parbox[t]{10.5cm}{%
+  \textbf{#3}%
+  \hfill%
+  {\footnotesize#4}\\%
     #5\vspace{\parsep}%
   }\\%
 }
@@ -354,8 +357,8 @@
 }
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitemshort}[2]{%
-  \hspace{5pt}#1&%
-  \parbox[t]{11.0cm}{%
+  \hspace{3pt}\parbox[t]{0.5cm}{\hfill}\hspace{2pt}\parbox[t]{1.9cm}{#1\hfill}&%
+  \parbox[t]{10.5cm}{%
     \textbf{#2}%
   }\\%
 }
@@ -367,8 +370,8 @@
 }
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitemshorticon}[3]{%
-  \hspace{3pt}#1\hspace{3pt}#2&
-      \parbox[t]{11.0cm}{%
+  \hspace{3pt}\parbox[t]{0.5cm}{#1\hfill}\hspace{2pt}\parbox[t]{1.9cm}{#2\hfill}&
+  \parbox[t]{10.5cm}{%
     \textbf{#3}%
   }\\%
 }
