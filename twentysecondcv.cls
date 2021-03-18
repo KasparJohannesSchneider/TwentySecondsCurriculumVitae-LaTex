@@ -32,6 +32,7 @@
 \RequirePackage{pgffor}
 \RequirePackage{marvosym}
 \RequirePackage{parskip}
+\RequirePackage{hyperref}
 
 %%%%%%%%%%%
 % OPTIONS %
@@ -145,7 +146,7 @@
 
 % skill bar graphs
 \newcommand{\barHeight}{0.35} % hight of each bar graph
-\newcommand{\barVfact}{1.05}  % Factor that controls vertical spacing
+\newcommand{\barVfact}{1.15}  % Factor that controls vertical spacing
 \newcommand\skills[1]{
   \renewcommand{\givenskill}{
     \noindent
@@ -187,9 +188,9 @@
 
 \newcommand{\makeprofile}
 {
-  % grey bar on the left side
+  % gray bar on the left side
   \begin{tikzpicture}[remember picture,overlay]
-      \node [rectangle, fill=asidecolor, anchor=north, minimum width=9.90cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+      \node [rectangle, fill=asidecolor, anchor=north, minimum width=9.70cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
   \end{tikzpicture}
 
   \begin{textblock}{6}(0.5, 0.2)
@@ -224,7 +225,7 @@
         \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\normalsize\icon{\faPhone}} & \givennumberphone\\}
         % CV mail
         \ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\normalsize\icon{\faEnvelope}} & \href{mailto:\givencvmail}{\textcolor{cerulean}\givencvmail}\\}
-        % &\\
+        &\\
         % CV stackoverflow
         \ifthenelse{\equal{\givencvstack}{}}{}{\textsc{\normalsize\icon{\faStackOverflow}} & \href{\givencvstacklink}{\textcolor{cerulean}\givencvstack}\\}
         % Github
@@ -235,8 +236,8 @@
       \end{tabular}
 
       % about me text
-      % \profilesection{About me}{3.2cm}
-      % \givenaboutme
+      \profilesection{About me}{3.2cm}
+      \givenaboutme
 
       % skills with scale
       \profilesection{Skills}{4cm}
@@ -312,7 +313,8 @@
 }
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitem}[4]{%
-  \hspace{5pt}#1&\parbox[t]{11.5cm}{%
+  \hspace{5pt}\parbox[t]{2.6cm}{#1\hfill}&%
+  \parbox[t]{10.5cm}{%
     \textbf{#2}%
     \hfill%
     {\footnotesize#3}\\%
@@ -327,7 +329,8 @@
 }
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitemicon}[5]{%
- \hspace{3pt}#1\hspace{2pt}#2&\parbox[t]{11.2cm}{%
+ \hspace{3pt}\parbox[t]{0.5cm}{#1\hfill}\hspace{2pt}\parbox[t]{1.9cm}{#2\hfill}&%
+ \parbox[t]{10.7cm}{%
     \textbf{#3}%
     \hfill%
     {\footnotesize#4}\\%
@@ -346,7 +349,8 @@
 }
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitemshort}[2]{%
-  \hspace{5pt}#1&\parbox[t]{11.5cm}{%
+  \hspace{5pt}#1&%
+  \parbox[t]{11.0cm}{%
     \textbf{#2}%
   }\\%
 }
@@ -359,7 +363,7 @@
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitemshorticon}[3]{%
   \hspace{3pt}#1\hspace{3pt}#2&
-      \parbox[t]{11.5cm}{%
+      \parbox[t]{11.0cm}{%
     \textbf{#3}%
   }\\%
 }
@@ -367,5 +371,4 @@
 %%%%%%%%%%%%%%%%
 % Page Setting %
 %%%%%%%%%%%%%%%%
-\RequirePackage[left=7.3cm,top=0.1cm,right=0.5cm,bottom=0.2cm,nohead,nofoot]{geometry}
-\RequirePackage{hyperref}
+\RequirePackage[a4paper,left=7.3cm,top=0.1cm,right=0.5cm,bottom=0.2cm,nohead,nofoot]{geometry}
