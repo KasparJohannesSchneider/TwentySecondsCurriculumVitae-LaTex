@@ -145,17 +145,22 @@
 }
 
 % skill bar graphs
+\newcommand{\skillIcon}[1]{\textcolor{mainblue}#1~}
 \newcommand{\barHeight}{0.35} % hight of each bar graph
 \newcommand{\barVfact}{1.15}  % Factor that controls vertical spacing
 \newcommand\skills[1]{
   \renewcommand{\givenskill}{
     \noindent
     \begin{tikzpicture}
-    \foreach [count=\i] \x/\y in {#1}
+    % loop through skills
+    \foreach [count=\i] \ic/\x/\y in {#1}
     {
+      % draw gray background
       \draw[fill=maingray,maingray] (0,{-(\i*\barVfact)}) rectangle (6,{-(\i*\barVfact)+\barHeight});
+      % draw blue bar
       \draw[fill=white,mainblue](0,{-(\i*\barVfact)}) rectangle (1.2*\y,{-(\i*\barVfact)+\barHeight});
-      \node [above right ] at (0,{-(\i*\barVfact)+\barHeight}) {\x};
+      \node [above right ] at (0,{-(\i*\barVfact)+\barHeight}) {\skillIcon{\ic}\x};
+      % draw tick-markers
       \foreach \z in {0,1,2,...,10}
       {
         \coordinate (A\z) at ($(0,{-(\i*\barVfact)})+(1.2*\z*0.5cm,0)$) {};
