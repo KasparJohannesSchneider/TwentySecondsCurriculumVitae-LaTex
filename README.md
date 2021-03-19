@@ -81,7 +81,7 @@ Here's an example:
 
 ## Toy Résumé with Fontawesome Icons (document class option _icon_)
 ***
-![sample résumé](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex/raw/master/Twenty-Seconds_cv_icons.jpg)
+![sample résumé](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex/raw/master/Twenty-Seconds_cv_icons.png)
 ***
 
 # Build 
