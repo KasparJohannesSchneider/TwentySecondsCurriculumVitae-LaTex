@@ -14,6 +14,11 @@ This fork is a derivative of [TwentySecondsCurriculumVitae-LaTex](https://github
 - Some optional blue icons for the sidebar have been added
 - The skill bar graphs have been equipped with icons
 - The alignment of `\twentyitem`, `\twentyitemicon` and `\twentyitemshort` has been changed
+
+## Toy Résumé with Fontawesome5 Icons (using the document class option ``icon``)
+***
+![sample résumé](https://raw.githubusercontent.com/KasparJohannesSchneider/TwentySecondsCurriculumVitae-LaTex/kaspar/Twenty-Seconds-Icons_cv.png)
+***
 ## HOT!
 
 - Support Fontawesome Icons, new class option ```\documentclass[icon]{twentysecondcv}```, using the name of the icon available in the documentation of the package [here](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex/raw/master/fontawesome.pdf).
@@ -42,7 +47,6 @@ This fork is a derivative of [TwentySecondsCurriculumVitae-LaTex](https://github
     {description}
 \end{twentyshorticon}
 ```
-
 
 # Curricula Vitae - Résumés
 A curriculum vitae, otherwise known as a CV or résumé, is a document used by individuals to communicate their work history, education and skill set. This is a style template for your curriculum written in LaTex. The main goal of this template is to provide a curriculum that is able to survive the résumés screening of "twenty seconds".
@@ -79,10 +83,6 @@ Here's an example:
 	
 -- _Cracking the Coding Interview, Book, Gayle Laakmann Mcdowell_ --
 
-## Toy Résumé with Fontawesome Icons (document class option _icon_)
-***
-![sample résumé](https://raw.githubusercontent.com/KasparJohannesSchneider/TwentySecondsCurriculumVitae-LaTex/kaspar/Twenty-Seconds-Icons_cv.png)
-***
 
 # Build 
 This guide will walk you through building your résumé.
