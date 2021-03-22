@@ -108,6 +108,7 @@
 \newcommand{\cvmail}[1]{\renewcommand{\givencvmail}{#1}}                % mail
 \newcommand{\cvnumberphone}[1]{\renewcommand{\givennumberphone}{#1}}    % phone
 \newcommand{\cvaddress}[1]{\renewcommand{\givencvaddress}{#1}}          % address
+\newcommand{\cvlocation}[1]{\renewcommand{\givencvlocation}{#1}}        % location
 \newcommand{\cvdriving}[1]{\renewcommand{\givencvdriving}{#1}}          % driver's licenses
 \newcommand{\cvstack}[2]{\renewcommand{\givencvstack}{#1}               % stack
 \renewcommand{\givencvstacklink}{#2}}                                   % stack link
@@ -123,6 +124,7 @@
 \newcommand{\givencvmail}{}          % mail
 \newcommand{\givennumberphone}{}     % phone
 \newcommand{\givencvaddress}{}       % address
+\newcommand{\givencvlocation}{}      % location
 \newcommand{\givencvdriving}{}       % driver's licenses
 \newcommand{\givenaboutme}{}         % about me
 \newcommand{\givenprofilepic}{}      % picture
@@ -223,9 +225,11 @@
         \ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\normalsize\icon{\faIcon{calendar-alt}}} & \givencvdate\\}
         % CV address
         \ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\normalsize\icon{\faHome}} & \givencvaddress\\}
+        % CV location
+        \ifthenelse{\equal{\givencvlocation}{}}{}{\textsc{\normalsize\icon{\faMapMarked*}} & \givencvlocation\\}
         % drivers License
         \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\normalsize\icon{\faCar}} & \givencvdriving\\}
-        &\\
+        % &\\
         % CV phone
         \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\normalsize\icon{\faPhone}} & \givennumberphone\\}
         % CV mail
