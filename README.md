@@ -10,6 +10,7 @@
 ## About this FORK
 This fork is a derivative of [TwentySecondsCurriculumVitae-LaTex](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex) created by [Carmine Spagnuolo](https://github.com/spagnuolocarmine).  Mainly the following changes have been made to the original repo:
 - This version uses A4 paper
+- Support for multiple Languages has been added
 - `fontawesome` has been updated to `fontawesome5` that supports fixed-width icons and consists of more icons
 - Some optional blue icons for the sidebar have been added
 - The skill bar graphs have been equipped with icons
@@ -19,6 +20,38 @@ This fork is a derivative of [TwentySecondsCurriculumVitae-LaTex](https://github
 ***
 ![sample résumé](https://raw.githubusercontent.com/KasparJohannesSchneider/TwentySecondsCurriculumVitae-LaTex/kaspar/Twenty-Seconds-Icons_cv.png)
 ***
+
+## Languages
+⚠ This feature is still experimental
+
+The desired language for the generated PDF can be set by either putting `\entrue` or `\detrue` right after `\documentclass[icon]{twentysecondcv}`.
+```tex
+\documentclass[icon]{twentysecondcv}
+%%%%%%%%%%%%%%%
+%% Languages %%
+%%%%%%%%%%%%%%%
+% set language either by \entrue or \detrue
+\detrue
+```
+Setting one language to true has the effect that either the content of  `\en{}` or `\en{}` will be used in the generated PDF.
+
+ℹ️ Text outside `\en{}` or `\en{}` will just be outputted regardless of the language set, neither of them have to be used.
+
+### Supported Languages
+At the moment the following languages are supported:
+
+|language|enable|usage|
+|:---:|:---:|:---:|
+|English|`\entrue`|`\en{}`|
+|German|`\detrue`|`\de{}`|
+
+### Example
+The following code snippet either 
+
+```tex
+\cvdate{\en{26 November 1865}\de{1. August 1291}}    % date of birth
+```
+   
 ## HOT!
 
 - Support Fontawesome Icons, new class option ```\documentclass[icon]{twentysecondcv}```, using the name of the icon available in the documentation of the package [here](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex/raw/master/fontawesome.pdf).

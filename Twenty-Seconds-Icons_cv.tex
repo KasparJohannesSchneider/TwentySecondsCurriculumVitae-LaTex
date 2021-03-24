@@ -11,29 +11,43 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[icon]{twentysecondcv}
+%%%%%%%%%%%%%%%
+%% Languages %%
+%%%%%%%%%%%%%%%
+% set language either by \entrue or \detrue
+\entrue
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%
 %% PROFILE SIDE BAR %%
 %%%%%%%%%%%%%%%%%%%%%%
 % personal info
-\profilepic{alice.jpeg}             % path of profile pic
-\cvname{Kaspar Johannes\\Schneider} % your name
-\cvjobtitle{Adventurer}             % your actual job position
-\cvdate{26 November 1865}           % date of birth
-\cvaddress{<address>}               % address
-\cvlocation{United Kingdom}         % location
-\cvdriving{Cat. B}                  % Driver's license
-\cvnumberphone{+39 0325658974}      % telephone number
-\cvmail{alice@wonderland.com}       % e-mail
-\cvstack{Alice}                     % Stack Overflow profile name
-{https://stackoverflow.com/}        % Stack Overflow profile link
-\cvgithub{torvalds}                 % GitHub username
-\cvlinkedin{linustorvalds}          % LinkedIn custom url name
+\profilepic{alice.jpeg}              % path of profile pic
+\cvname{\en{Alice}                   % your name
+\de{Kaspar Johannes\\Schneider}}
+\cvjobtitle{\en{Adventurer}          % your actual job position
+\de{Abenteurerin}}                 %
+\cvdate{\en{26 November 1865}        % date of birth
+\de{1. August 1291}}          %
+\cvaddress{\en{<address>}            % address
+\de{<Adresse>}}
+\cvlocation{\en{United Kingdom}      % location
+\de{Schweiz}}
+\cvdriving{\en{Cat. B}               % Driver's license
+\de{Kat. B}}
+\cvnumberphone{\en{+39 0325658974}   % telephone number
+\de{+41 79 000 00 00}}
+\cvmail{alice@wonderland.com}        % e-mail
+\cvstack{Alice}                      % Stack Overflow profile name
+{https://stackoverflow.com/}         % Stack Overflow profile link
+\cvgithub{torvalds}                  % GitHub username
+\cvlinkedin{linustorvalds}           % LinkedIn custom url name
 
 \aboutme{
 
-Alice is a sensible prepubescent girl from a wealthy English family who finds herself in a strange world ruled by imagination and fantasy. Alice feels comfortable with her identity and has a strong sense that her environment is comprised of clear, logical, and consistent rules and features. Alice's familiarity with the world has led one critic to describe her as a "disembodied intellect".
+\en{Alice is a sensible prepubescent girl from a wealthy English family who finds herself in a strange world ruled by imagination and fantasy. Alice feels comfortable with her identity and has a strong sense that her environment is comprised of clear, logical, and consistent rules and features. Alice's familiarity with the world has led one critic to describe her as a "disembodied intellect".}%
+\de{Alice ist ein sensibles vorpubertäres Mädchen aus einer wohlhabenden englischen Familie, das sich in einer fremden, von Phantasie und Vorstellungskraft beherrschten Welt wiederfindet. Alice fühlt sich wohl mit ihrer Identität und hat ein starkes Gefühl dafür, dass ihre Umgebung aus klaren, logischen und konsistenten Regeln und Merkmalen\\ besteht. Alices Vertrautheit mit der Welt hat einen Kritiker dazu gebracht, sie als "körperlosen Intellekt"\\ zu beschreiben.}
 } % about me section
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,10 +82,10 @@ Alice is a sensible prepubescent girl from a wealthy English family who finds he
 %%%%%%%%%%%%%%%%%%%%
 %% SIMPLE SECTION %%
 %%%%%%%%%%%%%%%%%%%%
-\sectionicon{\faAddressCard}{interests}
+\sectionicon{\faAddressCard}{\en{interests}\de{Interessen}}
 The heroine and the dreamer of Wonderland;  Alice is the principal character.
 
-\sectionicon{\faUniversity}{education}
+\sectionicon{\faUniversity}{\en{education}\de{Bildung}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%% TWENTY LIST ITEMS %%%%%%%%%%%%%%%%%%%%%%%
@@ -108,7 +122,7 @@ The heroine and the dreamer of Wonderland;  Alice is the principal character.
 %%%%%%%%% TWENTY LIST SHORTITEMS %%%%%%%%%%%%%%
 %%% Two arguments: date; title/description %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\sectionicon{\faBook}{publications}
+\sectionicon{\faBook}{\en{publications}\de{Publikationen}}
 \begin{twentyshort}
   \twentyitemshort
     {1865}
@@ -127,7 +141,7 @@ The heroine and the dreamer of Wonderland;  Alice is the principal character.
     {Chapter Five,  Advice from a Caterpillar.}
 \end{twentyshort}
 
-\sectionicon{\faAward}{awards}
+\sectionicon{\faAward}{\en{awards}\de{Auszeichnungen}}
 \begin{twentyshorticon}
   \twentyitemshorticon
     {\faBolt}
@@ -139,7 +153,7 @@ The heroine and the dreamer of Wonderland;  Alice is the principal character.
     {All-Time Best Fantasy Novel before 1990.}
 \end{twentyshorticon}
 
-\sectionicon{\faLaptopCode}{experience}
+\sectionicon{\faLaptopCode}{\en{experience}\de{Erfahrung}}
 \begin{twenty}
   \twentyitem
     {1900}
@@ -158,8 +172,9 @@ The heroine and the dreamer of Wonderland;  Alice is the principal character.
     {Walt Disney brings Lewis Carroll's fantasy story to life in this well done animated classic. Even though many elements from the book were dropped, such as the duchess with the baby pig and mock turtle, this version is without a doubt the most famous Alice adaption made.}
 \end{twenty}
 
-\sectionicon{\faInfoCircle}{other information}
-Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a “poky little house,” and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+\sectionicon{\faInfoCircle}{\en{other information}\de{Weitere Informationen}}
+\en{Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a “poky little house,” and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.}%
+\de{Alice nähert sich dem Wunderland als Anthropologin, behält aber ein starkes Gefühl von noblesse oblige bei, das mit ihrem Klassenstatus einhergeht. Sie hat Vertrauen in ihre soziale Position, Bildung und die viktorianische Tugend der guten Manieren. Alice hat ein Gefühl des Anspruchs, besonders wenn sie sich mit Mabel vergleicht, der sie erklärt, dass sie ein "schäbiges kleines Haus" und kein Spielzeug hat. Darüber hinaus stellt sie ihre begrenzte Informationsbasis mit jedem zur Schau, der zuhören will, und wird zunehmend besessen von der Bedeutung guter Manieren, während sie mit den unhöflichen Kreaturen des Wunderlandes umgeht. Alice behält eine überlegene Haltung und verhält sich mit fürsorglicher Nachsicht gegenüber denen, von denen sie glaubt, dass sie weniger privilegiert sind.}
 
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%% ENDBODY %%%%%%%%

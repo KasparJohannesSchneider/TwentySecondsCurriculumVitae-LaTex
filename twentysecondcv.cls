@@ -51,6 +51,15 @@
 
 \usetikzlibrary{calc}
 
+%%%%%%%%%%%%%%%
+%% Languages %%
+%%%%%%%%%%%%%%%
+\newif\ifen
+\newif\ifde
+
+\newcommand{\en}[1]{\ifen#1\fi}
+\newcommand{\de}[1]{\ifde#1\fi}
+
 %%%%%%%%%%
 % colors %
 %%%%%%%%%%
@@ -245,7 +254,7 @@
       \end{tabular}
 
       % about me text
-      \profilesection{About me}{3.2cm}
+      \profilesection{\en{About me}\de{Über mich}}{3.2cm}
       \givenaboutme
 
       % skills with scale
