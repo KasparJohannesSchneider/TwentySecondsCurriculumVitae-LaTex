@@ -35,7 +35,7 @@ The desired language for the generated PDF can be set by either putting `\entrue
 ```
 Setting one language to true has the effect that either the content of  `\en{}` or `\en{}` will be used in the generated PDF.
 
-ℹ️ Text outside `\en{}` or `\en{}` will just be outputted regardless of the language set, neither of them have to be used.
+ℹ️ Text outside `\en{}` or `\en{}` will just be outputted regardless of the language set, neither of them has to be used.
 
 ### Supported Languages
 At the moment the following languages are supported:
