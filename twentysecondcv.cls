@@ -42,6 +42,10 @@
 \DeclareOption{icon}{%
   \booltrue{icon}
 }
+\newbool{no_aboutme}
+\DeclareOption{no_aboutme}{%
+  \booltrue{no_aboutme}
+}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{
   \PassOptionsToClass{\CurrentOption}{article}
@@ -254,8 +258,10 @@
       \end{tabular}
 
       % about me text
-      \profilesection{\en{About me}\de{Über mich}}{3.2cm}
-      \givenaboutme
+      \ifbool{no_aboutme}{}{%
+        \profilesection{\en{About me}\de{Über mich}}{3.2cm}
+        \givenaboutme
+      }%
 
       % skills with scale
       \profilesection{Skills}{4cm}
