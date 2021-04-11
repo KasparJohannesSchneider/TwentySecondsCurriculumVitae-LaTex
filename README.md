@@ -45,9 +45,9 @@ The following options are available:
 ## Languages
 ⚠ **This feature is still experimental**
 
-The desired language for the generated PDF can be set by either adding the option `en` or `de`.
+The desired language for the generated PDF can be set by either adding the option `en` or `de`. **If neither `en` nor `de` has been specified, `en` will be selected by default.**
 ```tex
-\documentclass[icon]{twentysecondcv}      % Neither \en{} nor \de{} will be added
+\documentclass[icon]{twentysecondcv}      % By default \en{} will be added
 \documentclass[icon, en]{twentysecondcv}  % English: \en{} will be added
 \documentclass[icon, de]{twentysecondcv}  % German: \de{} will be added
 ```
@@ -58,13 +58,13 @@ Setting one language to true has the effect that either the content of  `\en{}` 
 ### Supported Languages
 At the moment the following languages are supported:
 
-|language|option|usage|
-|:---:|:---:|:---:|
-|English|`en`|`\en{}`|
-|German|`de`|`\de{}`|
+|language|option|usage|default|
+|:---:|:---:|:---:|:---:|
+|English|`en`|`\en{}`|✅|
+|German|`de`|`\de{}`||
 
 ### Example
-The following code snippet either 
+The following code snippet either adds *26 November 1865* to the document if the option `en` or no option has been specified or *1. August 1291* if the option `de` has been specified.
 
 ```tex
 \cvdate{\en{26 November 1865}\de{1. August 1291}}    % date of birth
