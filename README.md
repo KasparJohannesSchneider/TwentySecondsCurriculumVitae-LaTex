@@ -7,8 +7,19 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex/graphs/commit-activity) 
 
 [![Donate](https://img.shields.io/badge/PayPal-Donate%20to%20the%20original%20Author-blue.svg)](https://www.paypal.me/CarmineSpagnuolo) 
+
+## Toy Résumé with Fontawesome5 Icons (using the document class option ``icon``)
+***
+![sample résumé](https://raw.githubusercontent.com/KasparJohannesSchneider/TwentySecondsCurriculumVitae-LaTex/kaspar/Twenty-Seconds-Icons_cv.png)
+***
+
 ## About this FORK
 This fork is a derivative of [TwentySecondsCurriculumVitae-LaTex](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex) created by [Carmine Spagnuolo](https://github.com/spagnuolocarmine).  Mainly the following changes have been made to the original repo:
+
+### v1.1:
+- The option `no_aboutme` has been added
+- The languages are now handled as an option
+### v1.0:
 - This version uses A4 paper
 - Support for multiple Languages has been added
 - `fontawesome` has been updated to `fontawesome5` that supports fixed-width icons and consists of more icons
@@ -16,22 +27,29 @@ This fork is a derivative of [TwentySecondsCurriculumVitae-LaTex](https://github
 - The skill bar graphs have been equipped with icons
 - The alignment of `\twentyitem`, `\twentyitemicon` and `\twentyitemshort` has been changed
 
-## Toy Résumé with Fontawesome5 Icons (using the document class option ``icon``)
-***
-![sample résumé](https://raw.githubusercontent.com/KasparJohannesSchneider/TwentySecondsCurriculumVitae-LaTex/kaspar/Twenty-Seconds-Icons_cv.png)
-***
+## Options
+The following options are available:
+
+|option|effect|
+|:---:|:----|
+|`en`|The language english will be active. <br /> Thus the content of `\en{}` will be added to the document|
+|`de`|The language german will be active. <br /> Thus the content of `\de{}` will be added to the document|
+|`icon`|The package `fontawesome5` will be included.<br /> ⚠ **This option is mandatory for this version of the *Twenty Seconds CV* and thus it will be removed soon.**|
+|`no_aboutme`|The about me section in the profile side bar wil not be added to the document.|
+
+### How to use options
+```tex
+\documentclass[icon, en, no_aboutme, ...]{twentysecondcv}
+```
 
 ## Languages
-⚠ This feature is still experimental
+⚠ **This feature is still experimental**
 
-The desired language for the generated PDF can be set by either putting `\entrue` or `\detrue` right after `\documentclass[icon]{twentysecondcv}`.
+The desired language for the generated PDF can be set by either adding the option `en` or `de`.
 ```tex
-\documentclass[icon]{twentysecondcv}
-%%%%%%%%%%%%%%%
-%% Languages %%
-%%%%%%%%%%%%%%%
-% set language either by \entrue or \detrue
-\detrue
+\documentclass[icon]{twentysecondcv}      % Neither \en{} nor \de{} will be added
+\documentclass[icon, en]{twentysecondcv}  % English: \en{} will be added
+\documentclass[icon, de]{twentysecondcv}  % German: \de{} will be added
 ```
 Setting one language to true has the effect that either the content of  `\en{}` or `\en{}` will be used in the generated PDF.
 
@@ -40,10 +58,10 @@ Setting one language to true has the effect that either the content of  `\en{}` 
 ### Supported Languages
 At the moment the following languages are supported:
 
-|language|enable|usage|
+|language|option|usage|
 |:---:|:---:|:---:|
-|English|`\entrue`|`\en{}`|
-|German|`\detrue`|`\de{}`|
+|English|`en`|`\en{}`|
+|German|`de`|`\de{}`|
 
 ### Example
 The following code snippet either 
