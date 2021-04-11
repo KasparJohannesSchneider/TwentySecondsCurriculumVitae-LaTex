@@ -34,14 +34,36 @@
 \RequirePackage{parskip}
 \RequirePackage{hyperref}
 
+
 %%%%%%%%%%%
 % OPTIONS %
 %%%%%%%%%%%
+% languages
+% english
+\newif\ifen
+\entrue
+\DeclareOption{en}{%
+  \defalse
+  \entrue
+}
+\newcommand{\en}[1]{\ifen#1\fi}
+
+% german
+\newif\ifde
+\defalse
+\DeclareOption{de}{%
+  \enfalse
+  \detrue
+}
+\newcommand{\de}[1]{\ifde#1\fi}
+
 % icons
 \newbool{icon}
 \DeclareOption{icon}{%
   \booltrue{icon}
 }
+
+% don't add the about me section to the document
 \newbool{no_aboutme}
 \DeclareOption{no_aboutme}{%
   \booltrue{no_aboutme}
@@ -54,15 +76,6 @@
 \ifbool{icon}{\RequirePackage[fixed]{fontawesome5}}{}
 
 \usetikzlibrary{calc}
-
-%%%%%%%%%%%%%%%
-%% Languages %%
-%%%%%%%%%%%%%%%
-\newif\ifen
-\newif\ifde
-
-\newcommand{\en}[1]{\ifen#1\fi}
-\newcommand{\de}[1]{\ifde#1\fi}
 
 %%%%%%%%%%
 % colors %
