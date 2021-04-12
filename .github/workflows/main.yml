@@ -2,10 +2,10 @@ name: PDF to PNG
 on:
   push:
     branches:
-      - main
+      - kaspar
   pull_request:
     branches:
-      - main
+      - kaspar
 
 jobs:
   build:
