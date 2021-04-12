@@ -12,9 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Change ImageMagick security policy
+        run: echo | cat  /etc/ImageMagick-6/policy.xml
       - name: Convert PDF to PNG
-        run: echo | ls 
-          #convert -density 1200 -background white -alpha off Twenty-Seconds-Icons_cv.pdf -quality 90 Twenty-Seconds-Icons_cv.png
+        run: convert -density 1200 -background white -alpha off Twenty-Seconds-Icons_cv.pdf -quality 90 Twenty-Seconds-Icons_cv.png
       - name: Commit PNG
         id: commit
         run: |
