@@ -1,5 +1,7 @@
 # *FORK OF*: Twenty Seconds Curriculum Vitae in LaTex
 
+[![PDF to PNG](https://github.com/KasparJohannesSchneider/TwentySecondsCurriculumVitae-LaTex/actions/workflows/main.yml/badge.svg)](https://github.com/KasparJohannesSchneider/TwentySecondsCurriculumVitae-LaTex/actions/workflows/main.yml)
+
 [![made-with-latex](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg)](https://www.latex-project.org/) 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) 
 [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex)
