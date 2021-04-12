@@ -12,8 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install ImageMagick
-        run: echo "Hello world!" > ~/test.txt
-        echo "trying to read created file..."
-        cat ~/test.txt
+        run: cat README.md
       # - name: Convert PDF to PNG
       #   run: magick convert -density 1200 -background white -alpha off Twenty-Seconds-Icons_cv.pdf -quality 90 Twenty-Seconds-Icons_cv.png
