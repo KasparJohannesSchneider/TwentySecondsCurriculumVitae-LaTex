@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install ImageMagick
-        run: sudo apt install imagemagick
+        run: ls
       # - name: Convert PDF to PNG
       #   run: magick convert -density 1200 -background white -alpha off Twenty-Seconds-Icons_cv.pdf -quality 90 Twenty-Seconds-Icons_cv.png
