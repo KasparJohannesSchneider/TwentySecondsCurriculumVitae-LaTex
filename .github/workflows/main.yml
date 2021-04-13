@@ -21,7 +21,7 @@ jobs:
           RPL="rights=${DQT}read\|write${DQT} pattern=${DQT}PDF${DQT}"
           sudo sed -i "s/$SRC/$RPL/" /etc/ImageMagick-6/policy.xml
       - name: Convert PDF to PNG
-        run: convert -density 1200 -background white -alpha off Twenty-Seconds-Icons_cv.pdf -quality 90 Twenty-Seconds-Icons_cv.png
+        run: convert -density 900 -background white -alpha off Twenty-Seconds-Icons_cv.pdf -quality 90 Twenty-Seconds-Icons_cv.png
       - name: Commit PNG
         id: commit
         run: |
@@ -31,7 +31,7 @@ jobs:
           if [-z "$(git status --porcelain)"]; then
              echo "::set-output name=push::false"
           else
-             git commit -m "updated Twenty-Seconds-Icons_cv.png"
+             git commit -m "[bot] updated Twenty-Seconds-Icons_cv.png"
              echo "::set-output name=push::true"
           fi
         shell: bash
