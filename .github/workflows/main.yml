@@ -22,7 +22,7 @@ jobs:
           echo '*********************************************'
           echo $SRC
           echo $RPL
-          sudo echo | sed --debug -i "s/$SRC/$RPL/" /etc/ImageMagick-6/policy.xml
+          sudo sed -i "s/$SRC/$RPL/" /etc/ImageMagick-6/policy.xml
           echo '*********************************************'
           echo | cat /etc/ImageMagick-6/policy.xml
       - name: Convert PDF to PNG
