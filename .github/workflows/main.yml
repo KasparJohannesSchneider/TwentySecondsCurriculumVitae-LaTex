@@ -17,7 +17,8 @@ jobs:
           echo | cat /etc/ImageMagick-6/policy.xml
           DQT='"' 
           SRC="rights=${DQT}none${DQT} pattern=${DQT}PDF${DQT}"
-          RPL="rights=${DQT}read\|write${DQT} pattern=${DQT}PDF${DQT}"
+          RPL="HelloWorld"
+          #RPL="rights=${DQT}read\|write${DQT} pattern=${DQT}PDF${DQT}"
           echo '*********************************************'
           echo $SRC
           echo $RPL
