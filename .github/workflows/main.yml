@@ -18,7 +18,7 @@ jobs:
           DQT='"' 
           SRC="rights=\${DQT}none${DQT} pattern=${DQT}PDF${DQT}"
           RPL="rights=${DQT}read|write${DQT} pattern=${DQT}PDF${DQT}"
-          sed -i 's/$SRC/$RPL/' /etc/ImageMagick-6/policy.xml
+          sudo sed -i 's/$SRC/$RPL/' /etc/ImageMagick-6/policy.xml
           echo | cat /etc/ImageMagick-6/policy.xml
       - name: Convert PDF to PNG
         run: convert -density 1200 -background white -alpha off Twenty-Seconds-Icons_cv.pdf -quality 90 Twenty-Seconds-Icons_cv.png
