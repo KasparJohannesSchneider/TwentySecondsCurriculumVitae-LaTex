@@ -13,7 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Change ImageMagick security policy
-        run: echo | cat /etc/ImageMagick-6/policy.xml
+        run: |
+          echo | cat /etc/ImageMagick-6/policy.xml
           DQT='"' 
           SRC="rights=\${DQT}none${DQT} pattern=${DQT}PDF${DQT}"
           RPL="rights=${DQT}read|write${DQT} pattern=${DQT}PDF${DQT}"
