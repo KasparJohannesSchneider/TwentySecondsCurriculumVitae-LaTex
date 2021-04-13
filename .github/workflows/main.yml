@@ -12,15 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install ghostscript
+        run: sudo apt install ghostscript
       - name: Change ImageMagick security policy
         run: |
-          echo | cat /etc/ImageMagick-6/policy.xml
           DQT='"' 
           SRC="rights=${DQT}none${DQT} pattern=${DQT}PDF${DQT}"
           RPL="rights=${DQT}read\|write${DQT} pattern=${DQT}PDF${DQT}"
           sudo sed -i "s/$SRC/$RPL/" /etc/ImageMagick-6/policy.xml
-          echo '*****************************************************************************'
-          echo | cat /etc/ImageMagick-6/policy.xml
       - name: Convert PDF to PNG
         run: convert -density 1200 -background white -alpha off Twenty-Seconds-Icons_cv.pdf -quality 90 Twenty-Seconds-Icons_cv.png
       - name: Commit PNG
